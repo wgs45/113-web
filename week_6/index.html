@@ -1,0 +1,39 @@
+<!-- 
+FIXME: Edit Card page
+FIXME: Edit Blog page
+FIXME: Edit main index html page
+TODO: Host it to vercel 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Week 6</title>
+    <style>
+      iframe {
+        resize: both;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-img">
+        <img src="images/image.jfif" alt="Profile Picture" />
+      </div>
+      <ul class="nav-link">
+        <li onclick="openiframe(1)"><a href="#">Week 1</a></li>
+        <li onclick="openiframe(2)"><a target="_blank" href="week_3/index.html">Card</a></li>
+        <li onclick="openiframe(3)"><a href="#">Blog</a></li>
+        <li onclick="openiframe(4)"><a href="#">Others</li>
+      </ul>
+    </nav>
+    <div class="show-classdemo">
+      <iframe src="week_4/index.html" frameborder="1"></iframe>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
