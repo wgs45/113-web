@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   background: var(--grey-light);
   color: var(--grey-dark);
   font-size: 14px;
@@ -30,9 +30,13 @@ body {
 }
 
 .blogs-center {
-  width: var(--fluid-width);
-  max-width: var(--article-width);
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 img {
@@ -54,6 +58,8 @@ img:hover {
   margin-bottom: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease-in-out all;
+  width: 300px;
+  flex-shrink: 0;
 }
 
 .blog-img {
