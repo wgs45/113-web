@@ -1,0 +1,35 @@
+<!-- 
+BUG: index.html
+TODO: Host to vercel 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Midterm website design</title>
+    <style>
+      iframe {
+        resize: both;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-img">
+        <img src="images/image.jfif" alt="Profile Picture" />
+      </div>
+      <ul class="nav-link">
+        <li onclick="openiframe(1)"><a href="#">Blog</li>
+        <li onclick="openiframe(2)"><a href="#">Card</li>
+      </ul>
+    </nav>
+    <div class="show-classdemo">
+      <iframe src="blog/index.html" frameborder="1"></iframe>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
