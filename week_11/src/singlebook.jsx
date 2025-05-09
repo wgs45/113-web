@@ -1,26 +1,20 @@
-import { bookA, bookB, bookC, bookD } from './data';
+import { bookA, bookB, bookC, bookD, bookE, bookF } from './data';
 
 function Booklist() {
-  var data = [
-    {
-      id: 1,
-      img: bookA.img,
-      title: bookA.title,
-      author: bookA.author,
-    },
-    {
-      id: 2,
-      img: bookB.img,
-      title: bookB.title,
-      author: bookB.author,
-    },
-    {
-      id: 3,
-      img: bookC.img,
-      title: bookC.title,
-      author: bookC.author,
-    },
-  ];
+  var data = [bookA, bookB, bookC, bookD, bookE, bookF];
+
+  const Blog = ({ img, title, author, desc }) => {
+    return (
+      <article className='blog'>
+        <img src={img} alt={title} className='img blog-img' />
+        <div className='blog-content'>
+          <h1>{title}</h1>
+          <h3>{author}</h3>
+          <p>{desc}</p>
+        </div>
+      </article>
+    );
+  };
 
   return (
     <section className='blogs-center'>
@@ -30,6 +24,7 @@ function Booklist() {
           img={value.img}
           title={value.title}
           author={value.author}
+          desc={value.desc}
         ></Blog>
       ))}
     </section>
