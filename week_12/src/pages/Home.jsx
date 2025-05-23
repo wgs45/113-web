@@ -6,18 +6,22 @@ import Menu from '../components/Menu';
 const Home = () => {
   const [menuItems, setMenuItems] = useState(data);
 
+  const categoryFilters = (choose) => {
+    if (choose === 'all') {
+      setMenuItems(data);
+    } else {
+      setMenuItems(data.filter((value) => value.category === choose));
+    }
+  };
+
   return (
     <section className='menu'>
       <div className='title'>
         <h2>our menu</h2>
         <div className='underline'></div>
       </div>
-      <div className='btn-container'>
-        <Category />
-      </div>
-      <div className='section-center'>
-        <Menu items={data} />
-      </div>
+      <Category categoryFilter={categoryFilters} />
+      <Menu items={menuItems} />
     </section>
   );
 };
